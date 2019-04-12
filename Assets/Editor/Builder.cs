@@ -12,6 +12,16 @@ public class Builder :MonoBehaviour
     static string APP_NAME = PlayerSettings.productName;
     static string TARGET_DIR = "Builds";
 
+    public static BuildTarget target=BuildTarget.StandaloneWindows64;
+
+
+    static void Build()
+    {
+        target = BuildTarget.iOS;
+        string target_dir = "iOS" + APP_NAME + ".ipa";
+        GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, target, BuildOptions.None);
+    }
+
     [MenuItem("Builds/Standalone/MacOS")]
     static void PerformMacOSXBuild()
     {
@@ -33,6 +43,8 @@ public class Builder :MonoBehaviour
         GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.Android, BuildOptions.None);
     }
 
+
+    #region internal functions
     public static string[] FindEnabledEditorScenes()
     {
         List<string> EditorScenes = new List<string>();
@@ -54,4 +66,5 @@ public class Builder :MonoBehaviour
         }*/
 
     }
+    #endregion
 }
