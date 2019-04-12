@@ -17,8 +17,13 @@ public class Builder :MonoBehaviour
 
     static void Build()
     {
+        BuildiOS();
+    }
+
+    static void BuildiOS()
+    {
         target = BuildTarget.iOS;
-        string target_dir = "iOS" + APP_NAME + ".ipa";
+        string target_dir = "iOS_xCode" + APP_NAME;
         GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, target, BuildOptions.None);
     }
 
