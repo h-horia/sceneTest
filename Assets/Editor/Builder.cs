@@ -36,7 +36,7 @@ public class Builder :MonoBehaviour
         GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
-    [MenuItem("Builds/Android/Unsigned")]
+    [MenuItem("Builds/Android/Unsigned")] 
     static void PerformAndroidBuild()
     {
         string target_dir = "Android" + APP_NAME + "/" + APP_NAME + ".apk";
