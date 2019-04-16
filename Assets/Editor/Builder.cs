@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEditor.Build;
 
-public class Builder :MonoBehaviour
+public class Builder :MonoBehaviour 
 {
     static string[] SCENES = FindEnabledEditorScenes();
 
