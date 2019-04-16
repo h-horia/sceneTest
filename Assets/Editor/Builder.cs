@@ -22,7 +22,7 @@ public class Builder :MonoBehaviour
         GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, target, BuildOptions.None);
     }
 
-    [MenuItem("Builds/Standalone/MacOS")]
+    [MenuItem("Builds/Standalone/MacOS")] 
     static void PerformMacOSXBuild()
     {
         string target_dir = "MacOSX"+APP_NAME + ".app";
