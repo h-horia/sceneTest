@@ -15,12 +15,7 @@ public class Builder :MonoBehaviour
     public static BuildTarget target=BuildTarget.StandaloneWindows64;
 
 
-    static void Build()
-    {
-        BuildiOS();
-    }
-
-    static void BuildiOS()
+    static void PerformiOSBuild()
     {
         target = BuildTarget.iOS;
         string target_dir = "iOS_xCode" + APP_NAME;
