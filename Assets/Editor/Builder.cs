@@ -46,7 +46,15 @@ public class Builder :MonoBehaviour
     [MenuItem("Builds/LightBake")]
     static void PerformLightBake()
     {
-        Lightmapping.Bake();
+        Lightmapping.BakeAsync();
+        while (Lightmapping.isRunning && Lightmapping.buildProgress<1f)
+        {
+            int i = 0;
+            Debug.Log("Bakeprogress:" + Lightmapping.buildProgress);
+            i++;
+            
+        }
+        EditorApplication.Exit(0);
     }
 
     #region internal functions
