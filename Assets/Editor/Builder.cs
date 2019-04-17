@@ -43,6 +43,11 @@ public class Builder :MonoBehaviour
         GenericBuild(SCENES, TARGET_DIR + "/" + target_dir, BuildTarget.Android, BuildOptions.None);
     }
 
+    [MenuItem("Builds/LightBake")]
+    static void PerformLightBake()
+    {
+        Lightmapping.Bake();
+    }
 
     #region internal functions
     public static string[] FindEnabledEditorScenes()
