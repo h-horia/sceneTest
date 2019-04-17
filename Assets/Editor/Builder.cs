@@ -49,6 +49,7 @@ public class Builder :MonoBehaviour
         Lightmapping.Bake();
         EditorApplication.SaveScene();
 		Lightmapping.completed = null;
+		Debug.Log("Finished saving the scene");
         EditorApplication.Exit(0);
     }
 
